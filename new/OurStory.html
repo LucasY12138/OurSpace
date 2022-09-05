@@ -305,6 +305,13 @@
             t = 0;
         }
     }
+    function DaysInMonth(date2_UTC)
+    {
+        var monthStart = new Date(date2_UTC.getFullYear(), date2_UTC.getMonth(), 1);
+        var monthEnd = new Date(date2_UTC.getFullYear(), date2_UTC.getMonth() + 1, 1);
+        var monthLength = (monthEnd - monthStart) / (1000 * 60 * 60 * 24);
+        return monthLength;
+    }
     // var myAuto = document.getElementById('bgMusic');  
     // myAuto.play();  
 
